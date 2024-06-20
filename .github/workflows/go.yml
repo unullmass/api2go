@@ -22,11 +22,11 @@ jobs:
         go-version: ${{ matrix.go }}
     - name: Install dependencies
       run: |
-        go get -t -d -v ./...
-        go get github.com/onsi/ginkgo/ginkgo
-        go get -u golang.org/x/lint/golint
-        go get -u github.com/modocache/gover
-        go get -u github.com/mattn/goveralls
+        go mod tidy
+        go install github.com/onsi/ginkgo/ginkgo
+        go install golang.org/x/lint/golint
+        go install github.com/modocache/gover
+        go install github.com/mattn/goveralls
     - name: Run tests
       run: |
         ginkgo -r -cover --randomizeAllSpecs --randomizeSuites --failOnPending --trace --race --progress
