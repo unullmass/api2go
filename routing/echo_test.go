@@ -10,7 +10,7 @@ import (
 	"net/http/httptest"
 	"strings"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 	"github.com/manyminds/api2go"
 	"github.com/manyminds/api2go/examples/model"
 	"github.com/manyminds/api2go/examples/resource"
